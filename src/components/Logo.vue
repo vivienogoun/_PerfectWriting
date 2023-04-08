@@ -1,32 +1,34 @@
 <template>
   <div class="logo">
     <div class="logo--image">
-      
-      <img src="@/assets/PerfectWriting/smallicons/fire.png" alt="">  
+      <img src="@/assets/PerfectWriting/smallicons/star1.png" alt="" />
+
+      <div><p>Perfect Writting</p></div>
     </div>
-    <div><h4>Perfect Writting</h4></div>  
   </div>
 </template>
 
 <script>
-
 export default {
-name:"LogoComponent",
-}
+  name: "LogoComponent",
+};
 </script>
 <style lang='scss'>
-.logo{
-.logo--image{
-    img{
-         width:100px;
-    height: 70%;
+.logo {
+  .logo--image {
+    position: relative;
+    img {
+      width: 5%;
+      height: 5%;
     }
-   
+    p{
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+  h4 {
+    font-size: 1.2rem;
+    font-family: "Lexend", sans-serif;
+  }
 }
-h4{
-  font-size: 2rem;
-  font-family: 'Lexend', sans-serif;
-}
-}
-
 </style>

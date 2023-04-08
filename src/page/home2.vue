@@ -1,32 +1,25 @@
 <template>
-  <div class="page1">
-    <CercleComponent/>
+  <div class="page2">
+    <div class="circle--top"></div>
     <LogoComponent class="logo" />
     <div class="home">
       <div class="home--img">
         <img
           class="img-responsive"
-          src="@/assets/PerfectWriting/Illustrations/c5e9_b51s_210901.png"
+          src="@/assets/PerfectWriting/Illustrations/sv92_5eve_220226.png"
           alt=""
         />
-        <div>
-          <div class="pencil"></div>
-          <div class="dessin"></div>
-        </div>
       </div>
-      <div class="start">
-        <div class="start--image">
+      <div class="go">
+        <div class="go--image">
           <img
             class="img-responsive"
-            src="@/assets/PerfectWriting/smallicons/debut.png"
+            src="@/assets/PerfectWriting/smallicons/superhero1.png"
             alt=""
           />
-          <p>Bienvenue à PerfectWriting</p>
-            <router-link to="/page2">
-              <BoutonComponent class="bouton" />
-            </router-link>
-          
-          <p>J'apprends à lire et à écrire comme un grand</p>
+          <p>Deviens un AS de l'écriture</p>
+          <BoutonComponent class="bouton" />
+          <p>Je veux écrire comme les grands Moi!</p>
         </div>
       </div>
     </div>
@@ -36,23 +29,20 @@
 <script>
 import LogoComponent from "../components/Logo.vue";
 import BoutonComponent from "../components/Bouton.vue";
-import CercleComponent from "../components/Cercle.vue";
 export default {
-  name: "HomeComponent",
+  name: "HometwoComponent",
   components: {
     LogoComponent,
     BoutonComponent,
-    CercleComponent
   },
 };
 </script>
 
 <style lang='scss'>
-.page1 {
+.page2 {
 
   .logo {
     margin-top: 20px;
-   
   }
   .home {
     display: flex;
@@ -65,15 +55,15 @@ export default {
         height: 90%;
       }
     }
-    .start {
+    .go {
       width: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
-      .start--image {
+      .go--image {
         img {
-          width: 30%;
-          height: 30%;
+          width: 20%;
+          height: 20%;
           margin-right: 20px;
         }
         p {
@@ -86,6 +76,27 @@ export default {
         }
       }
     }
+  }
+  .circle--top{
+      width: 500px;
+    height: 500px;
+    padding-bottom: 700px;
+    border-radius: 50%;
+    background-color: #ff1744;
+    position: absolute;
+  top: -80%;
+    right:10%;
+    transform: translateX(-50%);
+  }
+  .circle--right {
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-color: #f825144d;
+    position: absolute;
+    top: -20%;
+    right: 10;
+    transform: translateY(-50%);
   }
 }
 </style>

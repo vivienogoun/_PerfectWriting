@@ -3,18 +3,20 @@
 </template>
 
 <script>
-import HomeComponent from "./page/home.vue"
 
+import HomeComponent from "./page/home.vue"
 export default {
   name: 'App',
   components: {
-    HomeComponent,
+    HomeComponent
   }
 }
 </script>
 
 <style>
+
 #app {
+
 
 }
 </style>
