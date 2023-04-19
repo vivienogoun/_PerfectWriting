@@ -1,6 +1,6 @@
 <template>
 <div>
-    <button type="submit" class=" btn btn-primary btnclass">Commencer</button>
+    <button type="submit" class="btnclass">Commencer</button>
 </div>
 </template>
 
@@ -12,11 +12,19 @@ name: "BoutonComponent",
 
 <style lang='scss'>
 .btnclass{
-    width:250px;
-    height:80px;
-  border-radius: 25%;
-
+    width:200px;
+    height:60px;
+  border-radius: 50px;
+  background:linear-gradient(to right,#422AF8,#FF1744 );
+  color: white;
+  border: none;
+  
 }
-
-
+.btnclass:hover
+{
+  
+  background:#FF1744;
+  border:solid 2px #422AF8 ;
+  color:white;
+}
 </style>

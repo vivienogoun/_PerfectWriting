@@ -1,35 +1,38 @@
 <template>
   <div class="page1">
-    <CercleComponent/>
-    <LogoComponent class="logo" />
-    <div class="home">
-      <div class="home--img">
-        <img
-          class="img-responsive"
-          src="@/assets/PerfectWriting/Illustrations/c5e9_b51s_210901.png"
-          alt=""
-        />
-        <div>
-          <div class="pencil"></div>
-          <div class="dessin"></div>
-        </div>
-      </div>
-      <div class="start">
-        <div class="start--image">
-          <img
-            class="img-responsive"
-            src="@/assets/PerfectWriting/smallicons/debut.png"
-            alt=""
-          />
-          <p>Bienvenue à PerfectWriting</p>
-            <router-link to="/page2">
-              <BoutonComponent class="bouton" />
-            </router-link>
-          
-          <p>J'apprends à lire et à écrire comme un grand</p>
-        </div>
-      </div>
+    <div>
+      <CercleComponent />
     </div>
+
+    <div class="logo ">
+      <LogoComponent />
+    </div>
+
+    <div class="home  container">
+      <div class="row">
+        <div class="home--img col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <img class="img-fluide mx-auto d-block" src="@/assets/PerfectWriting/Illustrations/c5e9_b51s_210901.png"
+            alt="" />
+          <div class="space_small_icons ">
+            <div class="pencil small_img "><img src="@/assets/PerfectWriting/smallicons/pencil.png" alt=""></div>
+            <div class="dessin small_img  "><img src="@/assets/PerfectWriting/smallicons/drawing.png" alt=""></div>
+          </div>
+        </div>
+        <div class="start col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="start--image">
+            <img class="img-fluide mx-auto d-block" src="@/assets/PerfectWriting/smallicons/debut.png" alt="" />
+            <p class="text-center">Bienvenue à PerfectWriting</p>
+              <router-link :to="{name: 'HomeTwoComponent'}">
+                <BoutonComponent class="bouton text-center" />
+              </router-link>
+            <p class=" apprendre text-center">J'apprends à lire et à écrire comme un grand</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 </template>
 
@@ -38,7 +41,7 @@ import LogoComponent from "../components/Logo.vue";
 import BoutonComponent from "../components/Bouton.vue";
 import CercleComponent from "../components/Cercle.vue";
 export default {
-  name: "HomeComponent",
+  name: "HomePage",
   components: {
     LogoComponent,
     BoutonComponent,
@@ -51,38 +54,59 @@ export default {
 .page1 {
 
   .logo {
-    margin-top: 20px;
-   
+    margin-top: 10px;
+
   }
+
   .home {
-    display: flex;
 
     .home--img {
-      width: 50%;
+
       position: relative;
+
+      .space_small_icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .small_img {
+          width: 8%;
+          height: 8%;
+        }
+      }
+
       img {
         width: 90%;
         height: 90%;
       }
+
     }
+
     .start {
-      width: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
+
       .start--image {
         img {
           width: 30%;
           height: 30%;
-          margin-right: 20px;
+
         }
+
         p {
           font-weight: bold;
           font-size: 1.4rem;
           margin-right: 20px;
         }
+
         .bouton {
           margin-bottom: 10px;
+        }
+
+        .apprendre {
+          font-weight: normal;
+          font-size: 1rem;
         }
       }
     }

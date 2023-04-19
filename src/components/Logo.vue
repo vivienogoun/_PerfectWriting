@@ -1,9 +1,9 @@
 <template>
-  <div class="logo">
-    <div class="logo--image">
-      <img src="@/assets/PerfectWriting/smallicons/star1.png" alt="" />
+  <div class="logo ">
+    <div class="logo--image ">
+      <img class="mx-auto d-block" src="@/assets/PerfectWriting/smallicons/star1.png" alt="" />
 
-      <div><p>Perfect Writting</p></div>
+      <div><p class="text-center">Perfect Writting</p></div>
     </div>
   </div>
 </template>
@@ -18,17 +18,13 @@ export default {
   .logo--image {
     position: relative;
     img {
-      width: 5%;
-      height: 5%;
+      width: 3%;
+      height: 3%;
     }
     p{
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 0.7rem;
     }
-  }
-  h4 {
-    font-size: 1.2rem;
-    font-family: "Lexend", sans-serif;
   }
 }
 </style>
