@@ -18,7 +18,7 @@ name: "BoutonComponent",
   background:linear-gradient(to right,#422AF8,#FF1744 );
   color: white;
   border: none;
-  
+  cursor: pointer;
 }
 .btnclass:hover
 {
