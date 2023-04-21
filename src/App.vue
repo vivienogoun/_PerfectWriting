@@ -1,22 +1,27 @@
 <template>
- <div id="app"> <ReadOptionsPage /> </div>
+ <router-view v-slot="{ Component }">
+  <transition name="fade">
+   <component :is="Component" />
+  </transition>
+ </router-view>
 </template>
 
 <script>
-
-import ReadOptionsPage from "./page/ReadOptions.vue";
 export default {
   name: 'App',
-  components: {
-    ReadOptionsPage,
-  }
 }
 </script>
 
 <style>
-
 #app {
+}
+.fade-enter-active,
+.fade-leave-active {
+ transition: opacity 0.5s ease;
+}
 
-
+.fade-enter-from,
+.fade-leave-to {
+ opacity: 0;
 }
 </style>
