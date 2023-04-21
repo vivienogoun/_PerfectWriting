@@ -1,14 +1,14 @@
 <template>
- <div id="app"> <ReadOptionsPage /> </div>
+ <div id="app"> <CongratsPage /> </div>
 </template>
 
 <script>
 
-import ReadOptionsPage from "./page/ReadOptions.vue";
+import CongratsPage from "./page/Congrats.vue";
 export default {
   name: 'App',
   components: {
-    ReadOptionsPage,
+    CongratsPage,
   }
 }
 </script>

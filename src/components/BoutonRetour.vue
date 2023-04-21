@@ -25,6 +25,6 @@ export default {
 
 }
 .btnretour:hover{
-    box-shadow: 6px 6px 0 gray  ;
+    box-shadow: 6px 6px 0 gray ;
 }
 </style>
