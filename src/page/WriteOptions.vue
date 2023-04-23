@@ -3,7 +3,10 @@
         <LogoComponent />
     </div>
     <div class="btn-retour">
-        <BoutonRetourComponent />
+        <router-link :to="{ name: 'MenuPage' }">
+            <BoutonRetourComponent />
+        </router-link>
+
     </div>
     <div class="container">
         <div class="row">
@@ -73,10 +76,11 @@ export default {
         padding: 20px;
         width: 90%;
         border-radius: 10px;
-        border-top: 3px solid  #422AF8;
-        border-right:3px solid #ff1744 ;
-        border-bottom:3px solid #422AF8;
-        border-left: 3px solid  #ff1744;
+        border-style: solid;
+
+        border-width: 4px;
+
+        border-image: linear-gradient(45deg, #422AF8, #ff1744) 1;
         margin: auto;
 
         img {
@@ -90,10 +94,11 @@ export default {
         padding: 20px;
         width: 90%;
         border-radius: 10px;
-        border-top: 3px solid #ff1744;
-        border-right:3px solid #422AF8 ;
-        border-bottom:3px solid #ff1744;
-        border-left: 3px solid #422AF8;
+        border-style: solid;
+
+        border-width: 4px;
+
+        border-image: linear-gradient(45deg, #422AF8, #ff1744) 1;
         margin: auto;
 
         img {
@@ -102,4 +107,5 @@ export default {
             height: 300px;
         }
     }
-}</style>
+}
+</style>

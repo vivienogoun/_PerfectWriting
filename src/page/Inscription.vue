@@ -36,7 +36,8 @@
                                 </label>
                             </div>
                             <div>
-                                <BoutontwoComponent class="text-center btn-ins" />
+                                <router-link :to="{name: 'MenuPage'}"><BoutontwoComponent class="text-center btn-ins" /></router-link>
+                                
                             </div>
                         </form>
                     </div>

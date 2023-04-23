@@ -4,7 +4,10 @@
             <LogoComponent />
         </div>
         <div class="btn--return">
-            <BoutonRetourComponent />
+            <router-link :to="{name:'ReadOptionsPage'}">
+                <BoutonRetourComponent />
+            </router-link>
+           
         </div>
         <div class="container">
             <div class="row">

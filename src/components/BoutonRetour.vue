@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button type="submit" class=" btnretour"><span class="glyphicon glyphicon-arrow-left"></span>Retour</button>
+        <button type="submit" class=" btnretour"><span class="glyphicon glyphicon-arrow-left">Retour</span></button>
 
     </div>
 </template>
@@ -22,6 +22,13 @@ export default {
     font-weight: bold;
     font-size: 1rem;
     border: 1px solid rgb(206, 130, 238);
+    span{
+        background:-webkit-linear-gradient(top, #422AF8 30%, #ff1744 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    }
+   
 
 }
 .btnretour:hover{

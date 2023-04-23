@@ -24,7 +24,7 @@
             <div class="start--image">
               <img class="img-fluide mx-auto d-block" src="@/assets/PerfectWriting/smallicons/debut.png" alt="" />
               <p class="text-center">Bienvenue à PerfectWriting</p>
-                <router-link :to="{name: 'HomeTwoComponent'}">
+                <router-link :to="{name: 'Home2Page'}">
                   <BoutonComponent class="bouton text-center" />
                 </router-link>
               <p class=" apprendre text-center">J'apprends à lire et à écrire comme un grand</p>

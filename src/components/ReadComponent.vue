@@ -31,7 +31,7 @@ export default{
     
 }
 .cont-read:hover{
-    background:linear-gradient(to right,#422AF8,#FF1744 );
+    background:linear-gradient(to right,#4832ec,#b94159 );
     color: white;
     cursor: pointer;
 }

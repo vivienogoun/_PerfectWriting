@@ -16,7 +16,10 @@
             <div class="go--image text-center">
               <img class="img-responsive" src="@/assets/PerfectWriting/smallicons/superhero1.png" alt="" />
               <p>Deviens un AS de l'écriture</p>
-              <BoutontwoComponent class="bouton" />
+               <router-link :to="{name: 'Home3Page'}">
+                <BoutontwoComponent class="bouton" />
+               </router-link>
+        
               <p class="ecrire">Je veux écrire comme les grands Moi!</p>
             </div>
           </div>
@@ -67,8 +70,8 @@ export default {
       .go--image {
 
         img {
-          width: 10%;
-          height: 10%;
+          width: 15%;
+          height: 20%;
           margin-bottom: 25px;
         }
 
