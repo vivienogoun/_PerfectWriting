@@ -11,6 +11,7 @@
         </div>
         <div class="container">
             <div class="row">
+                <CounterComponent/>
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><LireOptions style="margin:auto;"/></div>
                 <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"><TexteLecture style="margin:auto;" /></div>
             </div>
@@ -23,13 +24,15 @@ import LogoComponent from "../components/Logo.vue";
 import BoutonRetourComponent from "../components/BoutonRetour.vue";
 import LireOptions from "@/components/LireOptions.vue";
 import TexteLecture from "@/components/TexteLecture.vue";
+import CounterComponent from "../components/Counter.vue"
 export default{
     name: "LireTextePage",
     components: {
         LogoComponent,
         BoutonRetourComponent,
         LireOptions,
-        TexteLecture
+        TexteLecture,
+        CounterComponent,
 
     }
 }

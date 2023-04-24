@@ -24,6 +24,8 @@
    </script>
    
    <style lang="scss">
+   .lire--options{
+    margin: auto;
     .form--options{
         width: 150px;
         height: 130px;
@@ -42,5 +44,7 @@
 
         }
     }
+   }
+    
    
    </style>

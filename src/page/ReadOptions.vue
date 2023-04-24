@@ -18,11 +18,9 @@
                     </router-link>
                 </div>
                 <div class="text-center text-quote">
-                    <img class="quote" style="margin-left:15px;"
-                        src="@/assets/PerfectWriting/smallicons/quotes-removebg-preview.png" alt="">
+                    <img class="quote" style="margin-left:15px;" src="@/assets/PerfectWriting/smallicons/quotes-removebg-preview.png" alt="">
                     Et si je lisais une histoire? Peut-etre qu'un héro porte mon nom!
-                    <img class="quote" style="rotate: 180deg; margin-right:15px;"
-                        src="@/assets/PerfectWriting/smallicons/quotes-removebg-preview.png" alt="">
+                    <img class="quote" style="rotate: 180deg; margin-right:15px;" src="@/assets/PerfectWriting/smallicons/quotes-removebg-preview.png" alt="">
                     <p>D.Linson</p>
                 </div>
             </div>
@@ -59,6 +57,7 @@ export default {
     }
 
     .text-quote {
+        margin-top: 10px;
         .quote {
             width: 20px;
             height: 20px;
@@ -68,7 +67,7 @@ export default {
         p {
             font-weight: bold;
             margin-bottom: 40px;
-            margin-top: 10px;
+            margin-top: 30px;
         }
     }
 

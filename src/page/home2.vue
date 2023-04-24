@@ -14,7 +14,7 @@
           </div>
           <div class="go col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-around flex-column">
             <div class="go--image text-center">
-              <img class="img-responsive" src="@/assets/PerfectWriting/smallicons/superhero1.png" alt="" />
+              <img class="img-responsive mx-auto d-block" src="@/assets/PerfectWriting/smallicons/superhero1.png" alt="" />
               <p>Deviens un AS de l'écriture</p>
                <router-link :to="{name: 'Home3Page'}">
                 <BoutontwoComponent class="bouton" />
@@ -90,7 +90,7 @@ export default {
           font-size: 1rem;
         }
       }
-    }
+    } 
   }
 }
 </style>
