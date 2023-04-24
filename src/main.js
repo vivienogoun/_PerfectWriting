@@ -16,7 +16,8 @@ import MenuPage from './page/Menu.vue'
 import ReadOptionsPage from './page/ReadOptions.vue'
 import WriteOptionsPage from './page/WriteOptions.vue'
 import LireTextePage from './page/LireTexte.vue'
-import './assets/tailwind.css'
+// import './assets/tailwind.css'
+
 // declare app routes here
 const routes = [
     {
