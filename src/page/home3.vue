@@ -19,7 +19,10 @@
                         <div class="go--image text-center">
                             <img class="img-responsive" src="@/assets/PerfectWriting/smallicons/superhero1.png" alt="" />
                             <p>Lis encore plus d'aventures</p>
-                            <BoutontwoComponent class="bouton" />
+                            <router-link :to="{name: 'InscriptionPage'}">
+                                <BoutontwoComponent class="bouton" />
+                            </router-link>
+                           
                             <p class="ecrire">Je veux lire comme les grands Moi!</p>
                         </div>
                     </div>

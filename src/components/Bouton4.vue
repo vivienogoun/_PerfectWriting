@@ -1,13 +1,13 @@
 <template>
     <div>
-        <button type="submit" class="btnclass3">Lire</button>
+        <button type="submit" class="btnclass3">Ecrire</button>
 
     </div>
 </template>
     
 <script>
 export default {
-    name: "BoutonthreeComponent",
+    name: "BoutonfourComponent",
 }
 </script>
     

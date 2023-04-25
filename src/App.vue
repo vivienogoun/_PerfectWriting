@@ -1,22 +1,37 @@
 <template>
- <div id="app"> <HomePage/> </div>
+ <router-view v-slot="{ Component }">
+  <transition name="fade">
+   <component :is="Component" />
+  </transition>
+ </router-view>
 </template>
+
 
 <script>
 
-import HomePage from "./page/home.vue"
 export default {
+  
   name: 'App',
-  components: {
-    HomePage
-  }
 }
 </script>
-
 <style>
-
+@import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
 #app {
+  font-family: 'Lexend',sans-serif;
+}
+.fade-enter-active,
+.fade-leave-active {
+ transition: opacity 0.5s ease;
+}
 
-
+.fade-enter-from,
+.fade-leave-to {
+ opacity: 0;
+}
+.router-link-active,
+.router-link-exact-active,
+.router-link{
+  color: inherit;
+  text-decoration: none;
 }
 </style>

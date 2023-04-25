@@ -12,11 +12,14 @@
           <div class="home2--img col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <img class="img-responsive" src="@/assets/PerfectWriting/Illustrations/fille.svg" alt="" />
           </div>
-          <div class="go col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="go col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-around flex-column">
             <div class="go--image text-center">
               <img class="img-responsive" src="@/assets/PerfectWriting/smallicons/superhero1.png" alt="" />
               <p>Deviens un AS de l'écriture</p>
-              <BoutontwoComponent class="bouton" />
+               <router-link :to="{name: 'Home3Page'}">
+                <BoutontwoComponent class="bouton" />
+               </router-link>
+        
               <p class="ecrire">Je veux écrire comme les grands Moi!</p>
             </div>
           </div>
@@ -43,6 +46,11 @@ export default {
 <style lang='scss'>
 .page2 {
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+
   .logo {
     margin-top: 10px;
   }
@@ -62,8 +70,8 @@ export default {
       .go--image {
 
         img {
-          width: 10%;
-          height: 10%;
+          width: 15%;
+          height: 20%;
           margin-bottom: 25px;
         }
 
