@@ -17,7 +17,7 @@
                     </div>
                     <div class="go col-xs-12 col-sm-12 col-md-6 col-lg-6">
                         <div class="go--image text-center">
-                            <img class="img-responsive" src="@/assets/PerfectWriting/smallicons/superhero1.png" alt="" />
+                            <img class="img-responsive mx-auto d-block" src="@/assets/PerfectWriting/smallicons/superhero1.png" alt="" />
                             <p>Lis encore plus d'aventures</p>
                             <router-link :to="{name: 'InscriptionPage'}">
                                 <BoutontwoComponent class="bouton" />
@@ -79,8 +79,8 @@ export default {
             .go--image {
 
                 img {
-                    width: 10%;
-                    height: 10%;
+                    width: 12%;
+                    height: 12%;
                     margin-bottom: 25px;
                 }
 

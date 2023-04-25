@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button type="submit" class="btnclass">Commencer</button>
+    <button type="submit" class="boutonclass">Commencer</button>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang='scss'>
-.btnclass {
+.boutonclass {
   width: 200px;
   height: 60px;
   border-radius: 50px;
@@ -21,14 +21,13 @@ export default {
   cursor: pointer;
 }
 
-.btnclass:hover {
+.boutonclass:hover {
 
   background: #f1f0f0;
   border: 2px solid rgb(255, 188, 255);
   background: -webkit-linear-gradient(top, red 30%, blue 70%);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
-
+  
 }
 </style>
