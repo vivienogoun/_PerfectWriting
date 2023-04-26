@@ -22,12 +22,8 @@ export default {
 }
 
 .boutonclass:hover {
-
-  background: #f1f0f0;
-  border: 2px solid rgb(255, 188, 255);
-  background: -webkit-linear-gradient(top, red 30%, blue 70%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  
+   background: #FF1744;
+    border: solid 2px #422AF8;
+    color: white;
 }
 </style>

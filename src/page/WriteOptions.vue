@@ -16,8 +16,9 @@
                     <div style="margin-bottom:50px;" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                         <div class="caractere text-center ">
                             <p>J'apprends les caracteres pour ecrire</p>
+                            <router-link :to="{ name: 'MenuChiffrePage' }" >
                             <BoutonComponent />
-
+                        </router-link >
                             <img class="mx-auto d-block img-responsive"
                                 src="@/assets/PerfectWriting/Illustrations/2828174.jpg" alt="">
 

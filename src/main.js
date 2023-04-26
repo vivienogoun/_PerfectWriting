@@ -16,6 +16,10 @@ import MenuPage from './page/Menu.vue'
 import ReadOptionsPage from './page/ReadOptions.vue'
 import WriteOptionsPage from './page/WriteOptions.vue'
 import LireTextePage from './page/LireTexte.vue'
+import MenuChiffrePage from './page/MenuChiffre.vue'
+import MenuLettrePage from './page/MenuLettre.vue'
+import OptionsChiffrePage from './page/OptionsChiffre.vue'
+import EcrireChiffrePage from './page/EcrireChiffre.vue'
 // import './assets/tailwind.css'
 
 // declare app routes here
@@ -59,7 +63,27 @@ const routes = [
         path: '/lire_texte',
         name: 'LireTextePage',
         component: LireTextePage
-    }
+    },
+    {
+        path: '/menu_chiffre',
+        name: 'MenuChiffrePage',
+        component: MenuChiffrePage
+    },
+    {
+        path: '/menu_lettre',
+        name: 'MenuLettrePage',
+        component: MenuLettrePage
+    },
+    {
+    path: '/options_chiffre',
+    name: 'OptionsChiffrePage',
+    component: OptionsChiffrePage
+},
+{
+    path:'/ecrire_chiffre',
+    name:"EcrireChiffrePage",
+    component: EcrireChiffrePage
+}
 ];
 
 // create router object

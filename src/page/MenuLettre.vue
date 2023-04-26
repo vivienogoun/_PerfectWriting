@@ -4,11 +4,15 @@
             <LogoComponent />
         </div>
         <div class="btn--return">
-            <BoutonRetourComponent />
+            <router-link :to="{ name: 'WriteOptionsPage' }">
+                <BoutonRetourComponent />
+            </router-link>
         </div>
-        <div class="btn--lettre">
-            <p class="text-center">J'écris des lettres</p>
-        </div>
+        <router-link :to="{ name: 'MenuChiffrePage' }" style="text-decoration: none; color: inherit;">
+            <div class="btn--lettre">
+                <p class="text-center">J'écris des lettres</p>
+            </div>
+        </router-link>
         <div class="container">
             <div class="row">
                 <div class="form--niveau col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -62,7 +66,8 @@ export default {
         margin-left: 3%;
         margin-bottom: 3%;
     }
-    .btn--lettre{
+
+    .btn--lettre {
         width: 20%;
         height: 60px;
         border: 1px solid violet;
@@ -70,26 +75,31 @@ export default {
         margin: auto;
         border-radius: 50px;
         font-size: 1rem;
-        p{
+
+        p {
             margin-top: 15px;
             font-weight: bold;
         }
     }
+
     .form--niveau {
-        margin:auto;
+        margin: auto;
         width: 200px;
         height: 200px;
         border: 2px solid black;
         margin-bottom: 40px;
         margin-top: 40px;
-        border-top: 3px solid #ff1744;
-        border-right:3px solid #422AF8 ;
-        border-bottom:3px solid #ff1744;
-        border-left: 3px solid #422AF8;
-        img{
+        border-style: solid;
+
+        border-width: 4px;
+
+        border-image: linear-gradient(45deg, #422AF8, #ff1744) 1;
+
+        img {
             width: 50%;
             height: 40%;
         }
+
         p {
             font-weight: bold;
             margin-top: 40px;
@@ -98,7 +108,7 @@ export default {
     }
 
     .text-quote {
- 
+
         .quote {
             width: 20px;
             height: 20px;
