@@ -52,7 +52,7 @@ export default {
   height: 100vh;
 
   .logo {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   .home2 {
@@ -71,7 +71,7 @@ export default {
 
         img {
           width: 15%;
-          height: 20%;
+          height: 18%;
           margin-bottom: 25px;
         }
 

@@ -34,4 +34,8 @@ export default {
   color: inherit;
   text-decoration: none;
 }
+*{
+    margin: 0;
+    padding: 0;
+}
 </style>

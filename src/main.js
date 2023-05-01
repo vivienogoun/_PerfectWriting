@@ -20,6 +20,8 @@ import MenuChiffrePage from './page/MenuChiffre.vue'
 import MenuLettrePage from './page/MenuLettre.vue'
 import OptionsChiffrePage from './page/OptionsChiffre.vue'
 import EcrireChiffrePage from './page/EcrireChiffre.vue'
+import ConnexionPage from './page/Connexion.vue'
+
 // import './assets/tailwind.css'
 
 // declare app routes here
@@ -83,7 +85,12 @@ const routes = [
     path:'/ecrire_chiffre',
     name:"EcrireChiffrePage",
     component: EcrireChiffrePage
-}
+},
+{
+    path:'/connexion',
+    name:"ConnexionPage",
+    component: ConnexionPage
+},
 ];
 
 // create router object

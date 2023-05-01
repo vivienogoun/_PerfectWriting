@@ -90,7 +90,7 @@ export default {
 
             border-width: 2px;
 
-            border-image: linear-gradient(45deg, #422AF8, #ff1744) 1;
+            border-image:  linear-gradient(45deg,#8557e2,#da82b6) 1;
         }
     }
 
