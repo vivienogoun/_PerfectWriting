@@ -44,6 +44,7 @@
 import LogoComponent from "../components/Logo.vue";
 import BoutonRetourComponent from "../components/BoutonRetour.vue";
 import ChiffrePage from "../components/ChiffrePage.vue";
+
 export default {
     name: "OptionsChiffrePage",
     components: {

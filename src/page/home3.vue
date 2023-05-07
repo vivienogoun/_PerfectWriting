@@ -19,7 +19,7 @@
                         <div class="go--image text-center">
                             <img class="img-responsive mx-auto d-block" src="@/assets/PerfectWriting/smallicons/superhero1.png" alt="" />
                             <p>Lis encore plus d'aventures</p>
-                            <router-link :to="{name: 'InscriptionPage'}">
+                            <router-link :to="{name: 'ChoixConnexion'}">
                                 <BoutontwoComponent class="bouton" />
                             </router-link>
                            

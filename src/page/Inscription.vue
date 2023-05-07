@@ -5,6 +5,9 @@
                 <div class="logo--menu text-center">
                     <LogoComponent />
                 </div>
+                <router-link :to="{ name: 'ChoixConnexion' }">
+                    <BoutonRetourComponent />
+                </router-link>
                 <p class="text-center">Inscris pour sauvegarder tes progrès!</p>
                 <img class="img-responsive mx-auto d-block" src="@/assets/PerfectWriting/Illustrations/sady_ac7j_210901.png"
                     alt="">
@@ -13,41 +16,44 @@
                 <p class="text-center inscript-text">Inscription</p>
                 <div class="container">
                     <div class="row">
-                        <form action="">
+                        <form @submit.prevent="signup">
                             <div style="margin-bottom:70px;" class="row">
                                 <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <div><label for="name">Nom</label></div>
 
-                                    <input class="form-input" type="text" id="name">
+                                    <input class="form-input" type="text" id="name" v-model="name">
                                 </div>
                                 <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <div><label for="prenom">Prenoms</label></div>
 
-                                    <input class="form-input" type="text" id="prenom">
+                                    <input class="form-input" type="text" id="prenom" v-model="name_pre">
                                 </div>
-        
+
                             </div>
-                     
+
                             <div style="margin-bottom:40px;" class="row">
                                 <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <div><label for="mail">Mail</label></div>
 
-                                    <input class="form-input" type="text" id="mail">
+                                    <input class="form-input" type="text" id="mail" v-model="mail_user">
                                 </div>
                                 <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <div><label for="password">Mot de passe</label></div>
 
-                                    <input class="form-input" type="text" id="password">
+                                    <input class="form-input" type="text" id="password" v-model="password_user">
                                 </div>
-        
+
                             </div>
-                            <div> <label style="font-size: 1.1rem; font-weight: normal;" class="checkbox-inline" for=""><input type="checkbox">
+                            <div> <label style="font-size: 1.1rem; font-weight: normal;" class="checkbox-inline"
+                                    for=""><input type="checkbox">
                                     J'accepte de devenir un superhéro et de sauvegardé mes quetes!
                                 </label>
                             </div>
                             <div>
-                                <router-link :to="{name: 'ConnexionPage'}"><BoutontwoComponent class="text-center btn-ins"/></router-link>
-                                
+                                <div class="text-center">
+                                <button type="submit" class="con text-center">S'inscrire</button>
+                            </div>
+
                             </div>
                         </form>
                     </div>
@@ -60,13 +66,38 @@
 </template>
 <script>
 import LogoComponent from "../components/Logo.vue"
-import BoutontwoComponent from "../components/Bouton2.vue"
+import { accountService } from '@/_services'
 export default {
     name: "InscriptionPage",
     components: {
         LogoComponent,
-        BoutontwoComponent
-    }
+    },
+    data() {
+        return {
+            user: {
+                name: '',
+                name_pre: '',
+                mail_user: '',
+                password_user: ''
+            }
+        }
+    },
+    methods: {
+        signup() {
+
+            accountService.login(this.user)
+                .then(res => {
+                    accountService.saveToken(res.data.access_token)
+                    this.name = ''
+                    this.name_pre = ''
+                    this.mail_user = ''
+                    this.password_user = ''
+                    this.$router.push('/connexion')
+                })
+                .catch(
+                    err => console.log(err))
+        }
+    },
 
 
 }
@@ -93,6 +124,7 @@ export default {
 .inscription {
     background: linear-gradient(to top, #FF1744, #ff4368);
     padding: 10px;
+
     .inscript-text {
         font-size: 2rem;
         color: white;
@@ -116,18 +148,31 @@ export default {
         width: 90%;
         font-size: 1.2rem;
     }
-    .form-input{
+
+    .form-input {
 
         height: 55px;
         border-radius: 50px;
         padding: 20px;
-        background:#e9f0ff;
-        border:3px solid white;
+        background: #e9f0ff;
+        border: 3px solid white;
         font-weight: normal;
         font-size: 1rem;
     }
-    .btn-ins{
-        margin-top: 50px;
+    .con{
+        margin-top: 10px;
+        width: 230px;
+        height: 55px;
+        border-radius: 50px;
+        background-color:#ff4368;
+        color: white;
+        margin-top: 30px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .con:hover{
+        background-color:white ;
+        color: #FF1744;
     }
 }
 </style>

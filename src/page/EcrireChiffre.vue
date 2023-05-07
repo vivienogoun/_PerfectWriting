@@ -20,7 +20,7 @@
                         <ReglestravailPage style="margin: auto;" />
                     </div>
                     <DrawComponent class="btom" />
-                    <CahierComponent />
+                    <CahierComponent  class="btom" />
                     
                     <CahierComponent class="btom"/>
                 </div>

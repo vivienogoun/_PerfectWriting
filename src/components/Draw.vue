@@ -72,7 +72,7 @@ export default {
             const image = this.$refs.canvas.toDataURL("image/png");
             const link = document.createElement("a");
             link.download = "paint.png";
-            link.href = image;
+            link.href = image; 
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
