@@ -70,8 +70,8 @@ export default {
       .go--image {
 
         img {
-          width: 15%;
-          height: 18%;
+          width: 12%;
+          height: 26%;
           margin-bottom: 25px;
         }
 
