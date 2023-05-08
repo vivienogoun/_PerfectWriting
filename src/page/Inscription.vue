@@ -6,7 +6,7 @@
                     <LogoComponent />
                 </div>
                 <router-link :to="{ name: 'ChoixConnexion' }">
-                    <BoutonRetourComponent />
+                    <BoutonRetourComponent style="margin-bottom: 10px;" />
                 </router-link>
                 <p class="text-center">Inscris pour sauvegarder tes progrès!</p>
                 <img class="img-responsive mx-auto d-block" src="@/assets/PerfectWriting/Illustrations/sady_ac7j_210901.png"
@@ -59,7 +59,7 @@
 </template>
 <script>
 import LogoComponent from "../components/Logo.vue"
-import BoutonRetourComponent from "../components/BoutonRetour.vue"
+import BoutonRetourComponent from "@/components/BoutonRetour.vue"
 import { accountService } from '@/_services'
 export default {
     name: "InscriptionPage",
@@ -117,7 +117,7 @@ export default {
 
     .logo--menu {
         margin-top: 20px;
-        margin-bottom: 70px;
+        margin-bottom: 10px;
     }
 
     img {

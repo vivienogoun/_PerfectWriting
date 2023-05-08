@@ -6,8 +6,9 @@
                     <LogoComponent />
                 </div>
                 <router-link :to="{ name: 'ChoixConnexion' }">
-                    <BoutonRetourComponent />
+                    <BoutonRetourComponent style="margin-bottom: 10px;" />
                 </router-link>
+                
                 <p class="text-center">Connecte toi pour sauvegarder tes progrès!</p>
                 <img class="img-responsive mx-auto d-block"
                     src="@/assets/PerfectWriting/Illustrations/Wavy_Tech-16_Single-09.jpg" alt="">
@@ -41,7 +42,7 @@
 </template>
 <script>
 import LogoComponent from "../components/Logo.vue"
-import BoutonRetourComponent from "../components/BoutonRetour.vue"
+import BoutonRetourComponent from "@/components/BoutonRetour.vue"
 import { accountService } from '@/_services'
 export default {
     name: "ConnexionPage",
@@ -82,12 +83,12 @@ export default {
 
     .logo--menu {
         margin-top: 20px;
-        margin-bottom: 70px;
+        margin-bottom: 10px;
     }
 
     img {
-        width: 70%;
-        height: 70%;
+        width: 68%;
+        height: 68%;
     }
 
     p {
@@ -105,7 +106,6 @@ export default {
         font-weight: bold;
         margin-top: 60px;
         margin-bottom: 30px;
-
     }
 
     label {
@@ -141,14 +141,14 @@ export default {
         height: 55px;
         border-radius: 50px;
         background-color: #f78f83;
-        opacity: 0.8;
         color: white;
         margin: auto;
         font-size: 1rem;
         font-weight: bold;
     }
     .ins:hover{
-        opacity: 1;
+      background-color:white ;
+      color:  #8557e2;
     }
 }
 </style>
