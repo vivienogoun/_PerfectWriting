@@ -16,45 +16,38 @@
                 <p class="text-center inscript-text">Inscription</p>
                 <div class="container">
                     <div class="row">
-                        <form @submit.prevent="signup">
+                        <form @submit.prevent="signup" >
                             <div style="margin-bottom:70px;" class="row">
                                 <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <div><label for="name">Nom</label></div>
 
-                                    <input class="form-input" type="text" id="name" v-model="name">
+                                    <input class="form-input" type="text" id="name" v-model="lastname">
                                 </div>
                                 <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <div><label for="prenom">Prenoms</label></div>
 
-                                    <input class="form-input" type="text" id="prenom" v-model="name_pre">
+                                    <input class="form-input" type="text" id="prenom" v-model="firstname">
                                 </div>
-
                             </div>
 
                             <div style="margin-bottom:40px;" class="row">
                                 <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <div><label for="mail">Mail</label></div>
 
-                                    <input class="form-input" type="text" id="mail" v-model="mail_user">
+                                    <input class="form-input" type="text" id="mail" v-model="email">
                                 </div>
                                 <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <div><label for="password">Mot de passe</label></div>
 
-                                    <input class="form-input" type="text" id="password" v-model="password_user">
+                                    <input class="form-input" type="text" id="password" v-model="password">
                                 </div>
-
                             </div>
                             <div> <label style="font-size: 1.1rem; font-weight: normal;" class="checkbox-inline"
                                     for=""><input type="checkbox">
                                     J'accepte de devenir un superhéro et de sauvegardé mes quetes!
                                 </label>
                             </div>
-                            <div>
-                                <div class="text-center">
-                                <button type="submit" class="con text-center">S'inscrire</button>
-                            </div>
-
-                            </div>
+                            <input type="submit" class="con text-center" value="S'inscrire">
                         </form>
                     </div>
                 </div>
@@ -73,36 +66,49 @@ export default {
     components: {
         LogoComponent,
         BoutonRetourComponent
-
     },
     data() {
         return {
-            user: {
-                name: '',
-                name_pre: '',
-                mail_user: '',
-                password_user: ''
-            }
+            lastname: '',
+            firstname: '',
+            email: '',
+            password: ''
         }
     },
     methods: {
-        signup() {
+        base() {
+            accountService.base()
+            .then(response => {
+                console.log(response.data)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        },
 
-            accountService.login(this.user)
+        signup() {
+            let newUser = {
+                lastname: this.lastname,
+                firstname: this.firstname,
+                email: this.email,
+                password: this.password
+            }
+
+            accountService.register(newUser)
                 .then(res => {
-                    accountService.saveToken(res.data.access_token)
-                    this.name = ''
-                    this.name_pre = ''
-                    this.mail_user = ''
-                    this.password_user = ''
+                    console.log(res.data)
+                    accountService.saveToken(res.data)
+                    this.lastname = ''
+                    this.firstname = ''
+                    this.email = ''
+                    this.password = ''
                     this.$router.push('/connexion')
                 })
-                .catch(
-                    err => console.log(err))
+                .catch( err => {
+                    console.log(err)
+                })
         }
     },
-
-
 }
 </script>
 

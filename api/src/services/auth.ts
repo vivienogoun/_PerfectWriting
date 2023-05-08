@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 
 interface DecodedUser {
     id: number
-    username: string
+    email: string
 }
   
 declare global {
