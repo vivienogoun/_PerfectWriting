@@ -28,10 +28,9 @@ const show = async (req: Request, res: Response) => {
 const create = async (req: Request, res: Response) => {
     try {
         const user: User = {
-            firstname: req.body.firstname,
             lastname: req.body.lastname,
-            age: req.body.age,
-            username: req.body.username,
+            firstname: req.body.firstname,
+            email: req.body.email,
             password: req.body.password
         }
         const newUser = await store.create(user)
@@ -45,9 +44,9 @@ const create = async (req: Request, res: Response) => {
 
 const authenticate = async (req: Request, res: Response) => {
     try {
-        const user = await store.authenticate(req.body.username, req.body.password)
+        const user = await store.authenticate(req.body.email, req.body.password)
         if (!user) {
-            res.status(401).json({ error: 'Invalid username or password' })
+            res.status(401).json({ error: 'Invalid email or password' })
             return
         }
         const token = jwt.sign({ user }, process.env.TOKEN_SECRET as string)
@@ -71,8 +70,8 @@ const remove = async (req: Request, res: Response) => {
 const userRoutes = (app: express.Application) => {
     app.get('/users', verifyAuthToken, index)
     app.get('/users/:id', verifyAuthToken, show)
-    app.post('/users', create)
-    app.post('/sign-in', authenticate)
+    app.post('/register', create)
+    app.post('/login', authenticate)
     app.delete('/users/:id', verifyAuthToken, remove)
 }
 

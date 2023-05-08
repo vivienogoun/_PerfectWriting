@@ -4,7 +4,7 @@ import { accountService } from '@/_services'
 
 
 const Axios = axios.create({
-    baseURL: 'http://example.com/api',
+    baseURL: 'http://localhost:3000',
     timeout: 1000,
     headers: {
         Accept: 'application/json',

@@ -43,6 +43,7 @@ node_modules/
 build/
 database.json
 docker-compose.yml
+.python-version
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)

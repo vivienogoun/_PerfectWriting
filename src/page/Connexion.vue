@@ -6,8 +6,8 @@
                     <LogoComponent />
                 </div>
                 <router-link :to="{ name: 'ChoixConnexion' }">
-                <BoutonRetourComponent />
-            </router-link>
+                    <BoutonRetourComponent />
+                </router-link>
                 <p class="text-center">Connecte toi pour sauvegarder tes progrès!</p>
                 <img class="img-responsive mx-auto d-block"
                     src="@/assets/PerfectWriting/Illustrations/Wavy_Tech-16_Single-09.jpg" alt="">
@@ -28,11 +28,8 @@
 
                                     <input class="form-input" type="text" id="password" v-model="user.password">
                                 </div>
-
                             </div>
-                            <div class="text-center">
-                                <button type="submit" class="ins text-center">Se connecter</button>
-                            </div>
+                            <input type="submit" class="ins text-center" value="Se connecter">
                         </form>
                     </div>
                 </div>
@@ -44,6 +41,7 @@
 </template>
 <script>
 import LogoComponent from "../components/Logo.vue"
+import BoutonRetourComponent from "../components/BoutonRetour.vue"
 import { accountService } from '@/_services'
 export default {
     name: "ConnexionPage",
@@ -51,32 +49,31 @@ export default {
         return {
             user: {
                 email: '',
-                password: '',
-                error: '',
-                success: ''
+                password: ''
+                // error: '',
+                // success: ''
             }
         }
     },
     methods: {
         login() {
-
             accountService.login(this.user)
-                .then(res => {
-                    accountService.saveToken(res.data.access_token)
-                    this.email = ''
-                    this.password = ''
-                    this.$router.push('/menu_page')
-                })
-                .catch(
-                    err => console.log(err))
+            .then(res => {
+                console.log(res.data)
+                accountService.saveToken(res.data.token)
+                this.email = ''
+                this.password = ''
+                this.$router.push('/menu')
+            })
+            .catch( err => {
+                console.log(err)
+            })
         }
     },
     components: {
         LogoComponent,
-  
+        BoutonRetourComponent
     }
-
-
 }
 </script>
 

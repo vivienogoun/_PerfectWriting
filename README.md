@@ -27,12 +27,17 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 Go to the [api](api) folder
 
 1. Run `npm install` in your terminal to install the required packages.
-2. Fill in the [docker-compose.yml.example](api/docker-compose.yml.example), [.env.example](api/.env.example) and [database.json.example](api/database.json.example) files by replacing the placeholders with the appropriate values in each file. Rename the three files by deleting the `.example` extension for each of them.
+
+2. Create three files: **docker-compose.yml**, **.env** and **database.json** respectively based on the contents of [docker-compose.yml.example](api/docker-compose.yml.example), [.env.example](api/.env.example) and [database.json.example](api/database.json.example). Fill in the newly created files by replacing the placeholders with the appropriate values in each of them.
+**Note**: Don't make any change in the files ended by the extension **.example**.
+
 3. Run `docker-compose build` and then `docker-compose up` in your terminal to launch the project container.
 **Note**: These commands require administrator privileges.
-4. In **another terminal**, run `docker exec -ti name-of-your-container psql -U name-of-your-user name-of-your-db` to get into psql.
-**Note**: Run `docker ps -a` with administrator privileges to see the name of the running container.
-5. In **another terminal**, run `db-migrate up` to apply migrations on your database.
+
+4. In **another terminal**, run `docker exec -ti id-of-your-container psql -U name-of-your-user name-of-your-db` to get into psql.
+**Note**: Run `docker ps -a` with administrator privileges to see the id of the running container.
+
+5. In **another terminal**, run `npm i -g db-migrate` and then `db-migrate up` to apply migrations on your database.
 
 ### Run the API
 
